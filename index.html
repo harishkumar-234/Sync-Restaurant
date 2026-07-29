@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="SYNC - Premium Fine Dining Restaurant offering extraordinary culinary artistry, gourmet dishes, luxury ambiance, and world-class hospitality.">
+  <meta name="keywords"
+    content="SYNC Restaurant, Luxury Dining, Fine Dining, Gourmet Food, Table Reservation, Michelin Chef">
+  <title>SYNC | Luxury Fine Dining & Culinary Experience</title>
+
+  <!-- Google Fonts: Playfair Display + Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Round Favicon Logo for Browser Tab & URL Address Bar -->
+  <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/logo.png">
+
+  <!-- Custom CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ==========================================
+       2. Loading Screen
+       ========================================== -->
+  <div id="preloader">
+    <div class="loader-content">
+      <img src="images/icons/logo.png" alt="SYNC Logo" class="loader-logo-img">
+      <h1 class="loader-logo">SYNC</h1>
+      <p class="loader-subtitle">Fine Dining & Culinary Artistry</p>
+      <div class="loader-bar-bg">
+        <div class="loader-bar" id="loader-bar"></div>
+      </div>
+      <div class="loader-percentage" id="loader-percentage">0%</div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       3. Sticky Navigation Bar
+       ========================================== -->
+  <header class="navbar-header">
+    <div class="navbar-container">
+      <a href="#home" class="nav-logo">
+        <img src="images/icons/logo.png" alt="SYNC Logo" class="round-logo-img">
+        <span class="logo-text">SYNC</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#why-us" class="nav-link">Why SYNC</a></li>
+          <li><a href="#offers" class="nav-link">Offers</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#chefs" class="nav-link">Chefs</a></li>
+          <li><a href="#reservation" class="nav-link">Reservation</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-icon-btn" id="cart-icon-btn" aria-label="Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+        <a href="#reservation" class="btn-luxury btn-primary-gold" style="padding: 10px 22px; font-size: 0.85rem;">
+          Reserve Table
+        </a>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       4. Hero Section
+       ========================================== -->
+  <section class="hero-section" id="home">
+    <div class="hero-slider" id="hero-slider-container"></div>
+    <div class="hero-overlay"></div>
+
+    <!-- Floating Background Icons -->
+    <div class="floating-icon float-1">
+      <i class="fa-solid fa-wine-glass-empty" style="font-size: 3.5rem; color: var(--color-gold-primary);"></i>
+    </div>
+    <div class="floating-icon float-2">
+      <i class="fa-solid fa-crown" style="font-size: 4rem; color: var(--color-orange-warm);"></i>
+    </div>
+    <div class="floating-icon float-3">
+      <i class="fa-solid fa-utensils" style="font-size: 3.8rem; color: var(--color-gold-primary);"></i>
+    </div>
+    <div class="floating-icon float-4">
+      <i class="fa-solid fa-champagne-glasses" style="font-size: 4.2rem; color: var(--color-gold-light);"></i>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-welcome-tag">Welcome to SYNC Restaurant</p>
+      <h1 class="hero-title">Culinary Perfection Redefined</h1>
+
+      <div class="typing-container">
+        <span class="typing-text" id="typing-text"></span>
+      </div>
+
+      <p class="hero-subheading">
+        Experience unforgettable flavours, premium world-class hospitality, and an ultra-luxurious dining atmosphere
+        crafted for the refined palate.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#reservation" class="btn-luxury btn-primary-gold">
+          <i class="fa-solid fa-calendar-check"></i> Reserve Table
+        </a>
+        <a href="#menu" class="btn-luxury btn-outline-gold">
+          <i class="fa-solid fa-utensils"></i> Explore Menu
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. About SYNC Section
+       ========================================== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-collage reveal-on-scroll">
+          <img src="images/backgrounds/hero1.png" alt="SYNC Restaurant Ambiance" class="collage-img collage-img-1">
+          <img src="images/backgrounds/hero2.png" alt="SYNC Gourmet Dish" class="collage-img collage-img-2">
+          <div class="collage-badge">
+            <div class="years">15+</div>
+            <div class="text">Years of Excellence</div>
+          </div>
+        </div>
+
+        <div class="about-content-text reveal-on-scroll delay-200">
+          <span class="section-tag"><i class="fa-solid fa-star"></i> Our Story</span>
+          <h2 class="section-title">An Unrivalled Legacy of <span>Exquisite Taste</span></h2>
+          <p>
+            At SYNC, culinary creation is elevated to an art form. Founded on the principle of harmony between
+            traditional gastronomy and contemporary innovation, we craft immersive dining journeys that harmonize scent,
+            texture, and flavor.
+          </p>
+          <p>
+            Every ingredient is hand-selected from sustainable organic farms and international spice markets. Under the
+            vision of our master chefs, dining becomes a celebration of life’s finest moments.
+          </p>
+
+          <div class="about-features-list">
+            <div class="about-feature-item">
+              <i class="fa-solid fa-leaf"></i> 100% Organic Produce
+            </div>
+            <div class="about-feature-item">
+              <i class="fa-solid fa-award"></i> Michelin Star Recipe Standards
+            </div>
+            <div class="about-feature-item">
+              <i class="fa-solid fa-wine-bottle"></i> Sommelier Wine Pairings
+            </div>
+            <div class="about-feature-item">
+              <i class="fa-solid fa-gem"></i> Bespoke Private Dining
+            </div>
+          </div>
+
+          <a href="#menu" class="btn-luxury btn-orange-glow">
+            Discover Our Cuisine <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. Today's Special Dishes (Menu Section)
+       ========================================== -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="text-center reveal-on-scroll">
+        <span class="section-tag"><i class="fa-solid fa-fire"></i> Signature Culinary Selections</span>
+        <h2 class="section-title">Today's <span>Special Dishes</span></h2>
+        <p class="section-desc">Explore our hand-crafted menu featuring over 24 exquisite delicacies across world
+          cuisines.</p>
+
+        <div class="section-separator">
+          <div class="line"></div>
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2L15 9L22 9L16 14L18 21L12 17L6 21L8 14L2 9L9 9Z" />
+          </svg>
+          <div class="line"></div>
+        </div>
+      </div>
+
+      <!-- Menu Category Filters -->
+      <div class="menu-filter-bar reveal-on-scroll">
+        <button class="filter-btn active" data-filter="all">All Dishes</button>
+        <button class="filter-btn" data-filter="starters">Starters</button>
+        <button class="filter-btn" data-filter="south-indian">South Indian</button>
+        <button class="filter-btn" data-filter="north-indian">North Indian</button>
+        <button class="filter-btn" data-filter="chinese">Chinese</button>
+        <button class="filter-btn" data-filter="pizza-burger">Pizza & Burger</button>
+        <button class="filter-btn" data-filter="desserts">Desserts</button>
+      </div>
+
+      <!-- Search Filter Input -->
+      <div class="menu-search-wrapper reveal-on-scroll">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="menu-search" class="menu-search-input" placeholder="Search dish name or ingredient...">
+      </div>
+
+      <!-- Dishes Grid -->
+      <div class="dishes-grid" id="dishes-grid"></div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. Why Choose SYNC Section
+       ========================================== -->
+  <section class="why-section" id="why-us">
+    <div class="container">
+      <div class="text-center reveal-on-scroll">
+        <span class="section-tag"><i class="fa-solid fa-crown"></i> The SYNC Standard</span>
+        <h2 class="section-title">Why Choose <span>SYNC</span></h2>
+        <p class="section-desc">Setting the benchmark for luxury dining through passionate craftsmanship and flawless
+          service.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card glass-card reveal-on-scroll delay-100">
+          <div class="why-icon">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h3>Fresh Organic Ingredients</h3>
+          <p>Harvested daily from local partner farms to guarantee peak flavor, purity, and nutrition in every bite.</p>
+        </div>
+
+        <div class="why-card glass-card reveal-on-scroll delay-200">
+          <div class="why-icon">
+            <i class="fa-solid fa-user-chef"></i>
+          </div>
+          <h3>Master Chefs</h3>
+          <p>Led by globally acclaimed culinary masters bringing world-class expertise to your table.</p>
+        </div>
+
+        <div class="why-card glass-card reveal-on-scroll delay-300">
+          <div class="why-icon">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3>Fast & Attentive Service</h3>
+          <p>White-glove service standards ensuring your dining experience flows effortlessly from start to finish.</p>
+        </div>
+
+        <div class="why-card glass-card reveal-on-scroll delay-100">
+          <div class="why-icon">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <h3>Premium Quality</h3>
+          <p>Rigorous quality checks for every cut, spice blend, and dish plating standard before it leaves our kitchen.
+          </p>
+        </div>
+
+        <div class="why-card glass-card reveal-on-scroll delay-200">
+          <div class="why-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h3>Family Friendly Atmosphere</h3>
+          <p>Elegant private dining salons and cozy booths tailored for romantic dates or memorable family gatherings.
+          </p>
+        </div>
+
+        <div class="why-card glass-card reveal-on-scroll delay-300">
+          <div class="why-icon">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+          <h3>Seamless Online Reservation</h3>
+          <p>Reserve your preferred table, select dietary preferences, and pre-order champagne in just a few clicks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       8. Master Chefs Section
+       ========================================== -->
+  <section class="chefs-section" id="chefs">
+    <div class="container">
+      <div class="text-center reveal-on-scroll">
+        <span class="section-tag"><i class="fa-solid fa-hat-chef"></i> Culinary Visionaries</span>
+        <h2 class="section-title">Meet Our <span>Master Chefs</span></h2>
+        <p class="section-desc">The culinary artists behind SYNC's award-winning flavors and innovative presentations.
+        </p>
+      </div>
+
+      <div class="chefs-grid">
+        <div class="chef-card glass-card reveal-on-scroll delay-100">
+          <div class="chef-img-box">
+            <img src="images/chefs/chef1.png" alt="Chef Alexander Vance">
+            <div class="chef-overlay">
+              <h3 class="chef-name">Alexander Vance</h3>
+              <p class="chef-specialty">Executive Head Chef</p>
+              <div class="chef-socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chef-card glass-card reveal-on-scroll delay-200">
+          <div class="chef-img-box">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&q=80"
+              alt="Chef Sophia Laurent">
+            <div class="chef-overlay">
+              <h3 class="chef-name">Sophia Laurent</h3>
+              <p class="chef-specialty">Master Pastry & Dessert Specialist</p>
+              <div class="chef-socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chef-card glass-card reveal-on-scroll delay-300">
+          <div class="chef-img-box">
+            <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&w=600&q=80"
+              alt="Chef Rajesh Sharma">
+            <div class="chef-overlay">
+              <h3 class="chef-name">Rajesh Sharma</h3>
+              <p class="chef-specialty">Indian & Tandoor Specialist</p>
+              <div class="chef-socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chef-card glass-card reveal-on-scroll delay-400">
+          <div class="chef-img-box">
+            <img src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?auto=format&fit=crop&w=600&q=80"
+              alt="Chef Mei Ling">
+            <div class="chef-overlay">
+              <h3 class="chef-name">Mei Ling</h3>
+              <p class="chef-specialty">Pan-Asian & Wok Master</p>
+              <div class="chef-socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       9. Food Gallery Section
+       ========================================== -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="text-center reveal-on-scroll">
+        <span class="section-tag"><i class="fa-solid fa-camera"></i> Visual Feast</span>
+        <h2 class="section-title">Food & Ambiance <span>Gallery</span></h2>
+        <p class="section-desc">Immerse yourself in the aesthetic beauty of SYNC's dishes and dining hall.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal-on-scroll delay-100" data-title="Luxury Fine Dining Interior">
+          <img src="images/backgrounds/hero1.png" alt="Gallery Image 1" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-expand"></i>
+            <span class="gallery-title">Luxury Dining Ambiance</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll delay-200" data-title="Artisanal Michelin Plated Dish">
+          <img src="images/backgrounds/hero2.png" alt="Gallery Image 2" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-expand"></i>
+            <span class="gallery-title">Gourmet Plating</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll delay-300" data-title="Private Candlelight Setup">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80"
+            alt="Gallery Image 3" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-expand"></i>
+            <span class="gallery-title">Candlelight Tables</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll delay-100" data-title="Charcoal Tandoori Tikka">
+          <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80"
+            alt="Gallery Image 4" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-expand"></i>
+            <span class="gallery-title">Paneer Tikka Grill</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll delay-200" data-title="Smoked Artisan Burger">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80"
+            alt="Gallery Image 5" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-expand"></i>
+            <span class="gallery-title">Angus Beef Burger</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll delay-300" data-title="Royal Dum Biryani">
+          <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80"
+            alt="Gallery Image 6" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-expand"></i>
+            <span class="gallery-title">Royal Basmati Biryani</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll delay-100" data-title="Valrhona Gold Chocolate Cake">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80"
+            alt="Gallery Image 7" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-expand"></i>
+            <span class="gallery-title">24k Gold Chocolate Cake</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll delay-200" data-title="Stone-Baked Margherita Pizza">
+          <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=600&q=80"
+            alt="Gallery Image 8" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-expand"></i>
+            <span class="gallery-title">Neapolitan Margherita</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       10. Reservation Section
+       ========================================== -->
+  <section class="reservation-section" id="reservation">
+    <div class="container">
+      <div class="reservation-card glass-card reveal-on-scroll">
+        <div class="text-center">
+          <span class="section-tag"><i class="fa-solid fa-glass-cheers"></i> Book Your Table</span>
+          <h2 class="section-title">Online <span>Table Reservation</span></h2>
+          <p class="section-desc">Reserve your luxury dining experience at SYNC. We look forward to hosting you.</p>
+        </div>
+
+        <form class="reservation-form" id="reservation-form">
+          <div class="form-group">
+            <label for="res-name">Full Name *</label>
+            <input type="text" id="res-name" class="form-control" placeholder="e.g. Lord John Doe" required>
+          </div>
+
+          <div class="form-group">
+            <label for="res-phone">Phone Number *</label>
+            <input type="tel" id="res-phone" class="form-control" placeholder="+1 (555) 019-2834" required>
+          </div>
+
+          <div class="form-group">
+            <label for="res-email">Email Address *</label>
+            <input type="email" id="res-email" class="form-control" placeholder="john@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="res-date">Reservation Date *</label>
+            <input type="date" id="res-date" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="res-time">Preferred Time *</label>
+            <select id="res-time" class="form-control" required>
+              <option value="">Select Time Slot</option>
+              <option value="12:30 PM">12:30 PM (Lunch)</option>
+              <option value="01:30 PM">01:30 PM (Lunch)</option>
+              <option value="06:30 PM">06:30 PM (Dinner)</option>
+              <option value="07:45 PM">07:45 PM (Dinner)</option>
+              <option value="09:00 PM">09:00 PM (Late Dinner)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="res-guests">Number of Guests *</label>
+            <select id="res-guests" class="form-control" required>
+              <option value="">Select Guests</option>
+              <option value="1">1 Person (Single Table)</option>
+              <option value="2">2 Persons (Couple)</option>
+              <option value="4">4 Persons (Family)</option>
+              <option value="6">6 Persons (VIP Party)</option>
+              <option value="8+">8+ Persons (Private Dining Salon)</option>
+            </select>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="res-msg">Special Requests / Dietary Notes</label>
+            <textarea id="res-msg" class="form-control"
+              placeholder="Mention any allergies, anniversary preferences, or wine pre-orders..."></textarea>
+          </div>
+
+          <div class="form-group full-width text-center" style="margin-top: 10px;">
+            <button type="submit" class="btn-luxury btn-primary-gold"
+              style="width: 100%; max-width: 320px; margin: 0 auto;">
+              <i class="fa-solid fa-paper-plane"></i> Confirm Reservation
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       11. Customer Testimonials Section
+       ========================================== -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="text-center reveal-on-scroll">
+        <span class="section-tag"><i class="fa-solid fa-comments"></i> Guest Experiences</span>
+        <h2 class="section-title">What Guests <span>Say About Us</span></h2>
+      </div>
+
+      <div class="testimonial-carousel reveal-on-scroll">
+        <div class="testimonial-slide active">
+          <div class="testimonial-card glass-card">
+            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="testimonial-text">
+              "SYNC is without question the most magnificent dining experience I have encountered. The Butter Chicken
+              melted like velvet, and the gold chocolate cake was pure perfection. Outstanding!"
+            </p>
+            <div class="testimonial-user">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+                alt="Victoria Sterling" class="user-img">
+              <span class="user-name">Lady Victoria Sterling</span>
+              <div class="user-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-slide">
+          <div class="testimonial-card glass-card">
+            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="testimonial-text">
+              "We celebrated our 10th anniversary at SYNC. The ambiance with dark gold accents, candlelight, and
+              flawless sommelier wine pairings created memories we will cherish forever."
+            </p>
+            <div class="testimonial-user">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+                alt="Marcus Harrison" class="user-img">
+              <span class="user-name">Sir Marcus Harrison</span>
+              <div class="user-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-slide">
+          <div class="testimonial-card glass-card">
+            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="testimonial-text">
+              "The South Indian Masala Dosa and Dragon Chicken were flavor explosions. SYNC seamlessly combines global
+              culinary cultures into a masterclass of luxury dining."
+            </p>
+            <div class="testimonial-user">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80"
+                alt="Elena Rostova" class="user-img">
+              <span class="user-name">Elena Rostova</span>
+              <div class="user-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-dots" id="testimonial-dots"></div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       12. Restaurant Statistics Section
+       ========================================== -->
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal-on-scroll delay-100">
+          <i class="fa-solid fa-face-smile-beam"></i>
+          <div class="stat-number" data-target="25000">0</div>
+          <div class="stat-label">Happy Guests</div>
+        </div>
+
+        <div class="stat-item reveal-on-scroll delay-200">
+          <i class="fa-solid fa-plate-wheat"></i>
+          <div class="stat-number" data-target="150000">0</div>
+          <div class="stat-label">Dishes Served</div>
+        </div>
+
+        <div class="stat-item reveal-on-scroll delay-300">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label">Years of Excellence</div>
+        </div>
+
+        <div class="stat-item reveal-on-scroll delay-400">
+          <i class="fa-solid fa-user-chef"></i>
+          <div class="stat-number" data-target="12">0</div>
+          <div class="stat-label">Master Chefs</div>
+        </div>
+
+        <div class="stat-item reveal-on-scroll delay-500">
+          <i class="fa-solid fa-trophy"></i>
+          <div class="stat-number" data-target="28">0</div>
+          <div class="stat-label">Global Culinary Awards</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       13. Special Offers Section
+       ========================================== -->
+  <section class="offers-section" id="offers">
+    <div class="container">
+      <div class="text-center reveal-on-scroll">
+        <span class="section-tag"><i class="fa-solid fa-gift"></i> Exclusive Privilege</span>
+        <h2 class="section-title">Special <span>Offers</span></h2>
+        <p class="section-desc">Indulge in seasonal culinary packages and exclusive dining privileges.</p>
+      </div>
+
+      <div class="offers-grid">
+        <div class="offer-card glass-card reveal-on-scroll delay-100">
+          <div class="offer-badge">25% OFF</div>
+          <h3 class="offer-title">Weekend Tasting Menu</h3>
+          <p class="offer-desc">Enjoy a 7-course Michelin-inspired chef's tasting menu paired with rare reserve
+            vintages.</p>
+          <div class="offer-code">CODE: SYNC25</div>
+          <div>
+            <a href="#reservation" class="btn-luxury btn-primary-gold" style="width: 100%;">Claim Offer</a>
+          </div>
+        </div>
+
+        <div class="offer-card glass-card reveal-on-scroll delay-200">
+          <div class="offer-badge">COMPLIMENTARY</div>
+          <h3 class="offer-title">Champagne & Dessert Pairing</h3>
+          <p class="offer-desc">Book a private salon table for 4+ guests and receive a complimentary Dom Pérignon
+            bottle.</p>
+          <div class="offer-code">CODE: LUXCHAMP</div>
+          <div>
+            <a href="#reservation" class="btn-luxury btn-primary-gold" style="width: 100%;">Claim Offer</a>
+          </div>
+        </div>
+
+        <div class="offer-card glass-card reveal-on-scroll delay-300">
+          <div class="offer-badge">15% OFF</div>
+          <h3 class="offer-title">Early Bird Dinner Special</h3>
+          <p class="offer-desc">Dine between 5:30 PM and 7:00 PM on weekdays for exclusive savings across all entrees.
+          </p>
+          <div class="offer-code">CODE: EARLYBIRD</div>
+          <div>
+            <a href="#reservation" class="btn-luxury btn-primary-gold" style="width: 100%;">Claim Offer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       14. Contact Section & Map
+       ========================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="text-center reveal-on-scroll">
+        <span class="section-tag"><i class="fa-solid fa-location-dot"></i> Get In Touch</span>
+        <h2 class="section-title">Contact & <span>Location</span></h2>
+        <p class="section-desc">Visit us for an extraordinary dining experience or reach out for inquiries.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-box reveal-on-scroll">
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <div class="info-details">
+              <h4>Our Address</h4>
+              <p>742 Luxury Boulevard, Royal Culinary District, NY 10021</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-phone-volume"></i></div>
+            <div class="info-details">
+              <h4>Direct Reservations</h4>
+              <p>+1 (800) 890-SYNC / +1 (555) 789-1020</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+            <div class="info-details">
+              <h4>Email Enquiries</h4>
+              <p>reservations@syncrestaurant.com | concierge@syncrestaurant.com</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="info-details">
+              <h4>Operating Hours</h4>
+              <p>Mon - Fri: 12:00 PM - 11:30 PM<br>Sat - Sun: 11:30 AM - 01:00 AM</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-container reveal-on-scroll delay-200">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98513108459377!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+            allowfullscreen="" loading="lazy" title="SYNC Restaurant Location Map">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       15. Footer Section
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-wrapper">
+            <img src="images/icons/logo.png" alt="SYNC Logo" class="round-logo-img">
+            <span class="logo-text">SYNC</span>
+          </div>
+          <p>
+            SYNC is a world-class luxury restaurant committed to extraordinary taste, sustainable fine dining, and
+            unforgettable hospitality.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Tripadvisor"><i class="fa-brands fa-tripadvisor"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About SYNC</a></li>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#gallery">Food Gallery</a></li>
+            <li><a href="#chefs">Master Chefs</a></li>
+            <li><a href="#reservation">Book a Table</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Opening Hours</h4>
+          <ul class="footer-hours-list">
+            <li><strong>Lunch:</strong> 12:00 PM - 3:30 PM</li>
+            <li><strong>Dinner:</strong> 6:30 PM - 11:30 PM</li>
+            <li><strong>Weekend Lounge:</strong> Until 1:00 AM</li>
+            <li><strong>Private Dining:</strong> 24/7 By Appointment</li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4 class="footer-title">Privilege Club</h4>
+          <p>Subscribe to receive private invitations to chef tasting events and exclusive seasonal discounts.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Your email address..." required>
+            <button type="submit" class="newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 SYNC Fine Dining Restaurant. All Rights Reserved. Designed with Excellence.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       16. Back to Top Button
+       ========================================== -->
+  <button id="back-to-top" aria-label="Back to Top">
+    <i class="fa-solid fa-angle-up"></i>
+  </button>
+
+  <!-- ==========================================
+       17. Cart Offcanvas Drawer
+       ========================================== -->
+  <div id="cart-drawer">
+    <div class="cart-header">
+      <h3>Your Dining Order</h3>
+      <button class="cart-close-btn" id="cart-close-btn">&times;</button>
+    </div>
+    <div class="cart-body" id="cart-body">
+      <div class="cart-empty-text">Your cart is empty</div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <span id="cart-total-price">$0.00</span>
+      </div>
+      <a href="#reservation" class="btn-luxury btn-primary-gold" style="width: 100%;"
+        onclick="document.getElementById('cart-drawer').classList.remove('open')">
+        Proceed to Reservation
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       18. Lightbox Modal
+       ========================================== -->
+  <div id="lightbox-modal">
+    <button class="lightbox-close" id="lightbox-close">&times;</button>
+    <button class="lightbox-prev" id="lightbox-prev"><i class="fa-solid fa-angle-left"></i></button>
+    <div class="lightbox-content">
+      <img src="" id="lightbox-img" alt="Enlarged Gallery Image">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+    <button class="lightbox-next" id="lightbox-next"><i class="fa-solid fa-angle-right"></i></button>
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="js/slider.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

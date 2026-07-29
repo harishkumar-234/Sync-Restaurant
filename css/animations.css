@@ -1,0 +1,148 @@
+/* ==========================================================================
+   SYNC RESTAURANT - LUXURY ANIMATIONS SYSTEM
+   ========================================================================== */
+
+/* 1. Keyframes Definitions */
+
+/* Caret Blinking for Typing Animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--color-gold-primary); }
+}
+
+/* Floating Food/Icon Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(6deg);
+  }
+}
+
+/* Hero Scroll Mouse Indicator Wheel */
+@keyframes scroll-wheel {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 16px);
+  }
+}
+
+/* Button Ripple Effect */
+@keyframes ripple-effect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Fade In Base */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Slide Up Fade */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide Down Fade */
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Zoom In Effect */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pulse Gold Glow */
+@keyframes pulseGoldGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.6);
+  }
+}
+
+/* Shimmer Light Pass */
+@keyframes shimmerPass {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(200%) rotate(25deg); }
+}
+
+/* Rotate Slow */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* 2. Reveal Classes for JavaScript Intersection Observer */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.revealed, .revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Stagger Delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Micro-Interactions */
+.hover-lift {
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-luxury);
+}
+
+.hover-glow {
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.hover-glow:hover {
+  box-shadow: var(--shadow-gold-glow);
+  border-color: var(--color-gold-primary);
+}
+
+.pulse-glow {
+  animation: pulseGoldGlow 3s infinite ease-in-out;
+}
