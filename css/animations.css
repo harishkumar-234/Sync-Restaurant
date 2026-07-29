@@ -104,6 +104,22 @@
   to { transform: rotate(360deg); }
 }
 
+/* Preloader Logo Pulse & Glow Entrance */
+@keyframes logoPulseEntrance {
+  0% {
+    transform: scale(0.9) rotate(0deg);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4), 0 0 40px rgba(255, 123, 37, 0.2);
+  }
+  50% {
+    transform: scale(1.08) rotate(2deg);
+    box-shadow: 0 0 50px rgba(212, 175, 55, 0.85), 0 0 80px rgba(255, 123, 37, 0.5);
+  }
+  100% {
+    transform: scale(0.9) rotate(0deg);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4), 0 0 40px rgba(255, 123, 37, 0.2);
+  }
+}
+
 /* 2. Reveal Classes for JavaScript Intersection Observer */
 .reveal-on-scroll {
   opacity: 0;
